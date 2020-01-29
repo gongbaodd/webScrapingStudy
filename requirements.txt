@@ -78,7 +78,7 @@ Scrapy==1.8.0
 Send2Trash==1.5.0
 service-identity==18.1.0
 shub==2.10.0
-six==1.13.0
+six==1.14.0
 soupsieve==1.9.5
 spotdl==1.2.4
 spotipy==2.7.1
