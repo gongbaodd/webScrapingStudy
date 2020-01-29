@@ -90,3 +90,5 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 # LOG_LEVEL = 'INFO'
+
+FEED_EXPORT_ENCODING = 'utf-8'
