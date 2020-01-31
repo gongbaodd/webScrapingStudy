@@ -2,7 +2,7 @@
 import scrapy
 from bs4 import BeautifulSoup
 import re
-import feedparser
+# import feedparser
 
 class TvScheduleSpider(scrapy.Spider):
     name = 'tv_schedule'
@@ -34,7 +34,8 @@ class TvScheduleSpider(scrapy.Spider):
                 yield response.follow(rss_url, callback=self.parse_detail)
 
     def parse_detail(self, response):
-        yield feedparser.parse(response.text)
+        # yield feedparser.parse(response.text)
+        pass
 
     def _parse_days(self, day_htmls):
         dict = {}
