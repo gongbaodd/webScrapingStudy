@@ -107,6 +107,9 @@ ENV/
 # PyCharm
 .idea/
 
+#virtualenv
+scrapy/
+
 # ScrapingHub
 # setup.py
 # requirements.txt
