@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 import re
 # import feedparser
 
@@ -39,10 +39,10 @@ class TvScheduleSpider(scrapy.Spider):
 
     def _parse_days(self, day_htmls):
         dict = {}
-        for day_html in day_htmls:
-            soup = BeautifulSoup(day_html, 'lxml')
-            day_title = soup.find('dt').text
-            dict[day_title] = self._parse_day(soup)
+        # for day_html in day_htmls:
+        #     soup = BeautifulSoup(day_html, 'lxml')
+        #     day_title = soup.find('dt').text
+        #     dict[day_title] = self._parse_day(soup)
         return dict
 
     def _parse_day(self, soup):
