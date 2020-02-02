@@ -35,20 +35,20 @@ def get_dates(soup, host):
     for date_item in date_list:
         title = date_item.dt.text
         items = set()
-        
+
         if not date_item.dd:
             continue
 
         for a in date_item.find_all('a'):
             items.add(urljoin(host, a['href']))
-        
+
         dict[title] = items
     return dict
 
 def get_links(url):
     parseResult = urlparse(url)
     host = parseResult[0] + '://' + parseResult[1]
-    
+
     content = download_page(url)
 
     soup = BeautifulSoup(content, 'html.parser')

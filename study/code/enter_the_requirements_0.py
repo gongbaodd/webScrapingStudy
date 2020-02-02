@@ -35,7 +35,7 @@ def depth_first_search(start_url):
         print('DFS: ', url)
         if len(visited) > 2:
             break
-    
+
 def breadth_first_search(start_url):
     from collections import deque
     visited = set()
@@ -50,7 +50,7 @@ def breadth_first_search(start_url):
         print('BFS: ', url)
         if len(visited) > 2:
             break
-        
+
 if __name__ == '__main__':
     # depth_first_search('https://www.sainsburys.co.uk/shop/gb/groceries/meat-fish')
     depth_first_search('https://sina.cn/index/feed?from=touch&Ver=10')
