@@ -52,6 +52,7 @@ class Cmanuf(scrapy.Spider):
 
     def parseBook(self, response):
         url = response.url
+        pdf = ''
         
         for src in response.css('iframe::attr(src)').extract():
             pdf = src
