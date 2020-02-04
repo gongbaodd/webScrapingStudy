@@ -48,10 +48,16 @@ class Cmanuf(scrapy.Spider):
 
     def parseDetail(self, response):
         for href in response.css('.read.readactive a::attr(href)').extract():
-            yield response.follow(href, callback=self.parseBook, meta=response.meta)
+            yield SplashRequest(url='http://ebooks.cmanuf.com' + href, callback=self.parseBook, meta=response.meta)
 
     def parseBook(self, response):
+        url = response.url
+        
+        for src in response.css('iframe::attr(src)').extract():
+            pdf = src
+
         detail = response.meta['detail']
-        detail['bookUrl'] = response.url
+        detail['bookUrl'] = url
+        detail['pdf'] = pdf
 
         yield detail
