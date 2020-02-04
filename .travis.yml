@@ -5,3 +5,5 @@ install:
   - pip install -r requirements.txt
 script:
   - python -m pytest --cov=dev
+after_script:
+  - bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN > /dev/null
