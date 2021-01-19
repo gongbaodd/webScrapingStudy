@@ -2,6 +2,6 @@ beautifulsoup4==4.9.1
 feedparser==5.2.1
 scrapy-splash==0.7.2
 pytest==5.4.1
-pytest-cov==2.8.1
+pytest-cov==2.11.0
 Scrapy==2.1.0
 scrapy-splash==0.7.2
